@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript practice</title>
+</head>
+<body>
+  <h1>Your JavaScript page</h1>
+  <p>Use your Inspector to view your console.</p>
+  <script>
+    // Your code will go here
+
+    console.log("Let's do math:");
+    
+    let x = 5;
+    console.log(x);
+    
+    let y = 3;
+    console.log(y);
+
+    let z = x * y;
+    console.log(z);
+
+    //Math on my own
+
+    let a = 10 + 5;
+    console.log(a)
+
+    let b = 9 + 6;
+    console.log(b)
+
+    let c = 8 + 7;
+    console.log(c)
+
+    //9.4 Working with strings
+    console.log("Working with strings:");
+
+    let firstName = 'Kevin';
+    let middleName = '';
+    let lastName = 'Baskar';
+
+    let name;
+
+    if (middleName === "")
+    {
+        name = firstName + " " + lastName;
+        console.log(name);
+    }
+    else
+    {
+        name = firstName + " " + middleName + " " + lastName;
+        console.log(name);
+    }
+
+    //9.4.1 Strings on your own
+
+    let greeting = "My name is ";
+    console.log(greeting + name);
+
+
+    // 10.1 How functions work
+
+    console.log("Using functions:");// function to make square numbers
+    function makeSquare(theNumb)
+    {
+        let squared = Math.pow(theNumb, 2)
+        return squared;
+    }
+
+    let try01 = makeSquare(3);
+    console.log(try01);
+    let try02 = makeSquare(4);
+    console.log(try02);
+    let try03 = makeSquare(5);
+    console.log(try03);
+
+    // 10.2 Functions on your own
+
+    function makeName(firstName, middleName, lastName)
+    {
+        let wholeName;
+        
+        if (middleName === "")
+        {
+            wholeName = firstName + " " + lastName;
+        }
+        else
+        {
+            wholeName = firstName + " " + middleName + " " + lastName;
+        }
+
+        return wholeName;
+    }
+
+    attempt_functions_1 = makeName("Robert", "Beto", "O'Rourke");
+    console.log(attempt_functions_1);
+
+    attempt_functions_2 = makeName("Kevin", "", "Baskar");
+    console.log(attempt_functions_2);
+
+    attempt_functions_3 = makeName("Barish", "Baskar", "Hawkins");
+    console.log(attempt_functions_3);
+
+    // 11.1 Let's create a better name function
+    // Just a log to show in our Console
+    console.log("Making a better name function:");
+
+    // A better name function to fix middle initials
+
+// Make a name with middle initial
+    function makeBetterName(firstName, middleName, lastName)
+    {
+        if (middleName.length === 1)
+        {
+            middleName = middleName + ".";
+        }
+
+        let fullName = firstName + " " + middleName + " " + lastName;
+        
+        return fullName;
+    }
+
+    console.log(makeBetterName("Joan", "Marie", "Larkin"));
+    console.log(makeBetterName("John", "F", "Kennedy"));
+    console.log(makeBetterName("Hope", "A", "Lopez"));
+
+    //11.3
+    console.log("scoreCompare function");
+    
+    function scoreCompare(home, away)
+    {
+        if (home > away)
+        {
+            return "Home team wins!";
+        }
+        else if (home === away)
+        {
+            return "The teams tie!";;
+        }
+        else
+        {
+            return "Away team wins :("
+        }
+    }
+
+    console.log(scoreCompare(5,3));
+    console.log(scoreCompare(3,5));
+    console.log(scoreCompare(4,4));
+    
+    //12 JS Objects
+
+    var person =
+    {
+        firstName: "Christian",
+        lastName: "McDonald",
+        age: "53",
+        fullName : function()
+        {
+            return this.firstName + " " + this.lastName;
+        }
+    };
+
+    
+  </script>
+</body>
+</html>
